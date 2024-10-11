@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import "@/style/tailwind.css";
+import Container from "@/components/shared/container/container";
 
 export const metadata: Metadata = {
   title: "Zustand Multi-Step Form",
@@ -13,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Container>
+          <main className="flex justify-center items-center h-screen mx-auto">
+            {children}
+          </main>
+        </Container>
+      </body>
     </html>
   );
 }
